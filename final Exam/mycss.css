@@ -1,0 +1,222 @@
+/* Top Menu Table */
+table {
+  min-width: 150px;
+  width: 100%;
+  height: 40px;
+  margin: 1px;
+  border-collapse: collapse;
+}
+
+.logo-image img {
+  width: 40px;
+}
+
+.menu-text {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+td {
+  text-align: center;
+}
+
+/* Header menu */
+.header {
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+/* Welcome picture */
+.pic-welcome img {
+  width: 100%;
+  height: 100px;
+  margin: 1px;
+  border-radius: 5px;
+}
+
+/* Main content table */
+.table2 table {
+  font-size: 15px;
+  width: 100%;
+  margin: 5px;
+  border-radius: 20px;
+  border-collapse: collapse;
+}
+
+/* FIXED: Make image fill the first column */
+.about-pic {
+  height: 100%;      
+}
+
+.about-pic img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;  /* Fill perfectly */
+  display: block;
+  border-radius: 5px;
+}
+
+.table2 td {
+  background-color: white;
+  vertical-align: top;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+/* Set specific widths */
+.table2 td:nth-child(1) { width: 20%; }
+.table2 td:nth-child(2) { width: 35%; }
+.table2 td:nth-child(3) { width: 25%; }
+.table2 td:nth-child(4) { width: 20%; }
+
+/* Headings */
+.table2 h3, .table2 h4 {
+  background-color: black;
+  color: white;
+  padding: 5px;
+  text-align: left;
+  font-size: 18px;
+  border-radius: 10px;
+}
+
+.table2 h4 {
+  background-color: rgb(14, 7, 118);
+}
+
+.table2 h6 {
+  background-color: rgb(14, 7, 118);
+}
+
+.table2 p {
+  font-size: 20px;
+  line-height: 1.5;
+  color: #ffffff;
+  text-align: left;
+}
+
+/* FIXED: Removed height:150px (this was breaking your picture!) */
+.table2 img {
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+/* AUCA Campus image */
+.table2 img[alt="AUCA Campus"] {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Form styling */
+form {
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.form-row {
+  display: flex;
+  align-items: right;
+  margin-bottom: 5px;
+}
+
+.form-row label {
+  width: 150px;
+  font-weight: bold;
+  text-align: right;
+}
+
+.form-row input[type="text"] {
+  flex: 1;
+  padding: 4px;
+  border: 1px solid #666;
+  border-radius: 4px;
+}
+
+input[type="button"] {
+  padding: 6px 15px;
+  background-color: rgb(108, 108, 108);
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+  margin-top: 10px;
+}
+
+input[type="button"]:hover {
+  background-color: #006166;
+}
+
+/* Buttons and inputs */
+.form-buttons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.button-set {
+  text-align: center;
+}
+
+.button-set input[type="button"] {
+  padding: 6px 15px;
+  background-color: rgb(108, 108, 108);
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.button-set input[type="button"]:hover {
+  background-color: #006166;
+}
+
+.button-set input[type="text"] {
+  margin-top: 5px;
+  width: 100px;
+  padding: 4px;
+  border-radius: 4px;
+  border: 1px solid #666;
+}
+
+/* IT Faculty background */
+.it-faculty {
+  background-image: url("inside1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 10px;
+  vertical-align: top;
+  border-right: 2px solid #ccc;
+}
+
+.it-faculty .overlay {
+  
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  position: static;
+  text-decoration-color: white;
+}
+
+.it-faculty .overlay ul li {
+  color: white;
+  font-size: 16px; /* optional: adjust size */
+  line-height: 1.5; /* optional: spacing */
+  text-align: left;
+}
+.form-buttons-horizontal {
+  display: flex;
+  justify-content: space-around; /* spreads buttons evenly */
+  align-items: center; /* vertical alignment */
+  margin-top: 15px;
+}
+
+.form-buttons-horizontal .button-set {
+  margin: 0; /* remove extra margins if any */
+}
