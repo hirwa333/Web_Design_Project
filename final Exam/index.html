@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="mycss.css">
+<title>FINAL-EXAM</title>
+</head>
+<body>
+
+  <!-- Top menu -->
+  <table class="header">
+    <tr>
+      <td class="logo-image"><img src="URLogo.jpg" alt="AUCA Logo"></td>
+     <td><span class="menu-text">HOME</span></td>
+      <td><span class="menu-text">APPLICATION</span></td>
+      <td><span class="menu-text">STUDENTS</span></td>
+      <td><span class="menu-text">MARKS</span></td>
+      <td><span class="menu-text">ACADEMICS</span></td>
+    </tr>
+  </table>
+
+  <!-- Welcome picture -->
+  <div class="pic-welcome">
+    <img src="111.png" alt="Welcome Picture">
+  </div>
+
+  <!-- Main content -->
+  <div class="table2">
+    <table>
+      <tr>
+        <td class="about-pic">
+          <img src="building.avif" alt="Building Picture">
+        </td>
+
+        <td class="it-faculty">
+          <div class="overlay">
+            <h4>Teacher Management system-TMS</h4>
+            <p>TMS provide solution for managing teacher data promoting transparancy, and enable evidance based decision making...</p>
+            <h4>Transforming Teacher Management in Rwanda</h4>
+            <p>Rwanda trusted Platform for efficience teacher Here you'll find a detailed explanation of each admission application requirement...</p>
+            <h4>Comprehensive</h4>
+            <ul>
+              <li>College of Arts and Social Sciences (CASS)</li>
+              <li>College of Agriculture Animal sciences and Veterinary Medicine (GAVM)</li>
+              <li>College of Business and Economics (CBE)</li>
+              <li>College of Medical and Health Sciences</li>
+              <li>College of Education (CE)</li>
+              <li>College of Science and Technology</li>
+            </ul>
+          </div>
+        </td>
+
+        <!-- Student Marks Form -->
+        <td>
+          <h4>Calculate Students Marks</h4>
+          <form id="studentForm" action="save_student.php" method="POST">
+            <div class="form-row">
+              <label>STUDENT-NAMES:</label>
+              <input type="text" id="studentName" name="student_name" required>
+            </div>
+            <div class="form-row">
+              <label>STUDENT-ID:</label>
+              <input type="text" id="studentID" name="student_id" required>
+            </div>
+            <div class="form-row">
+              <label>DEPARTMENT:</label>
+              <input type="text" id="department" name="department" required>
+            </div>
+            <div class="form-row">
+              <label>COURSE-WORK/30:</label>
+              <input type="number" id="cw" name="cw" required>
+            </div>
+            <div class="form-row">
+              <label>MID-TERM/30:</label>
+              <input type="number" id="mid" name="mid" required>
+            </div>
+            <div class="form-row">
+              <label>FINAL-EXAM/40:</label>
+              <input type="number" id="final" name="final" required>
+            </div>
+
+            <!-- Buttons -->
+            <div class="form-buttons-horizontal">
+              <div class="button-set">
+                <input type="button" value="TOTAL" id="btnTotal">
+                <input type="text" id="total" placeholder="Total result here" readonly>
+              </div>
+              <div class="button-set">
+                <input type="button" value="AVERAGE" id="btnAverage">
+                <input type="text" id="average" placeholder="Average result here" readonly>
+              </div>
+              <div class="button-set">
+                <input type="button" value="DELETE" id="btnGrade">
+                <input type="text" id="grade" placeholder="Grade result here" readonly>
+              </div>
+            </div>
+
+            <div class="form-buttons-horizontal">
+              <div class="button-set">
+                <button type="submit">SUBMIT</button>
+              </div>
+              <div class="button-set">
+                <button type="button" onclick="window.location.href='display_students.php'">RETRIEVE</button>
+              </div>
+              <div class="button-set">
+                <button type="button" onclick="window.location.href='display_students.php'">Print</button>
+              </div>
+            </div>
+          </form>
+        </td>
+
+        <td class="about-pic">
+          <img src="4.jpg" alt="Building Picture">
+        </td>
+      </tr>
+    </table>
+  </div>
+
+<script>
+function getNumber(id){ return parseFloat(document.getElementById(id).value)||0; }
+
+document.getElementById('btnTotal').addEventListener('click', ()=>{
+  document.getElementById('total').value = getNumber('cw')+getNumber('mid')+getNumber('final');
+});
+document.getElementById('btnAverage').addEventListener('click', ()=>{
+  document.getElementById('average').value = ((getNumber('cw')+getNumber('mid')+getNumber('final'))/3).toFixed(2);
+});
+document.getElementById('btnGrade').addEventListener('click', ()=>{
+  let total = getNumber('cw')+getNumber('mid')+getNumber('final');
+  document.getElementById('grade').value = total>=70?'A':total>=60?'B':total>=50?'C':'Failed';
+});
+</script>
+
+</body>
+</html>
